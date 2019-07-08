@@ -8,7 +8,7 @@ class TodoNew extends Component {
 
   handleChange = (e) => {
     const {name, value} = e.target;
-
+    // debugger
     this.setState({ [name]: value })
   }
 
@@ -20,13 +20,23 @@ class TodoNew extends Component {
   }
 
   render() {
+    let {content, completed} = this.state
+    console.log(this.state)
     return(
       <div>
         <h1>Add A ToDo!</h1>
         <form onSubmit={this.handleFormSubmission}>
-          <label>Content: </label><input type='text' name='content' value={this.state.content} onChange={this.handleChange}/><br />
-          <label>Task completed?</label><input type='checkbox' name='completed' value={this.state.completed}onChange={this.handleChange}/><br />
-          <input type='submit' value='Add ToDo'/>
+          <label>Content: </label>
+          <input type='text' name='content' onChange={this.handleChange}/><br />
+          <label>Task completed?</label>
+          <input type='checkbox' name='completed' value={completed}onChange={this.handleChange}/><br />
+          {/* <label>newField: </label>
+          <input type='text' name='newField' onChange={this.handleChange}/><br />
+          <label>secondField: </label>
+          <input type='text' name='secondField' onChange={this.handleChange}/><br />
+          <label>thirdField: </label>
+          <input type='text' name='thirdField' onChange={this.handleChange}/><br />*/}
+          <input type='submit' value='Add ToDo'/> 
         </form>
       </div>
     )
