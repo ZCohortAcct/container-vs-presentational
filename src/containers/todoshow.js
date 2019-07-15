@@ -3,7 +3,7 @@ import ToDo from '../components/todo'
 
 class TodoShow extends Component {
   render() {
-    const todo = this.props.todos[this.props.match.params.id]
+    const todo = this.props.todos
     // debugger
     return(
       <div>
