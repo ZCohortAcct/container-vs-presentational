@@ -14,7 +14,7 @@ class TodoList extends Component {
 
     // let list = this.props.todos.map(ToDo)
 
-    let list = this.props.todos.map((todo, idx) => <ToDo key={idx+1} content={todo.content} completed={todo.completed}/>)
+    let list = this.props.todos.map((todo, idx) => <ToDo key={idx+1} content={todo.content} completed={todo.completed} />)
 
     return(
       <div>
