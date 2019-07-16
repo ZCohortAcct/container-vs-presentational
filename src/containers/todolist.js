@@ -3,6 +3,7 @@ import ToDo from '../components/todo'
 
 class TodoList extends Component {
   render() {
+    console.log(this.props.todos)
     // let list = this.props.todos.map((props, index) => {
     //   return (
     //     <li>
@@ -14,7 +15,7 @@ class TodoList extends Component {
 
     // let list = this.props.todos.map(ToDo)
 
-    let list = this.props.todos.map((todo, idx) => <ToDo key={idx+1} content={todo.content} completed={todo.completed} />)
+    let list = this.props.todos.map((todo, idx) => <ToDo key={idx+1} content={todo.content} completed={todo.completed} index={idx}/>)
 
     return(
       <div>

@@ -1,5 +1,6 @@
 // import React, { Component } from 'react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // deconsturcting: content = props.content
 // const Todo = ({content, completed}, index) => {
@@ -14,14 +15,25 @@ import React from 'react';
 // }
 
 
-const Todo = (props, index) => {
+const Todo = (props) => {
+  // debugger
   return (
     <li>
-      content: {props.content}<br />
+      content: <Link to={`/todos/${props.index}`}>{props.content}</Link><br />
       completed: {props.completed ? 'yes' : 'no'}
     </li>
   )
 }
+
+// deconstructing
+// const Todo = ({content, completed, index}) => {
+//   return (
+//     <li>
+//       content: <Link to={`/todos/${index}`}>{content}</Link><br />
+//       completed: {completed ? 'yes' : 'no'}
+//     </li>
+//   )
+// }
 
 // class Todo extends Component {
 //   render() {
